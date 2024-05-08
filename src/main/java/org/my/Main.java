@@ -20,15 +20,15 @@ public class Main {
 
                     driver.get("https://chercher.tech/practice/popups");
                     driver.manage().window().maximize();
+                    
                     WebElement alert = driver.findElement(By.name("alert"));
                     alert.click();
-
                     String alertMessage = driver.switchTo().alert().getText();
                     System.out.println(alertMessage);
                     driver.switchTo().alert().accept();
+                    
                     WebElement confirm = driver.findElement(By.name("confirmation"));
                     confirm.click();
-
                     String alertMessage2 = driver.switchTo().alert().getText();
                     System.out.println(alertMessage2);
                     driver.switchTo().alert().accept();
